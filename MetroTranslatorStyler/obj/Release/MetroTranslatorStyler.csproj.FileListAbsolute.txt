@@ -1,0 +1,7 @@
+C:\dev\cs\MetroTranslatorStyler\MetroTranslatorStyler\bin\Release\MetroTranslator.dll
+C:\dev\cs\MetroTranslatorStyler\MetroTranslatorStyler\bin\Release\MetroTranslator.pdb
+C:\dev\cs\MetroTranslatorStyler\MetroTranslatorStyler\bin\Release\MetroFramework.Design.dll
+C:\dev\cs\MetroTranslatorStyler\MetroTranslatorStyler\bin\Release\MetroFramework.dll
+C:\dev\cs\MetroTranslatorStyler\MetroTranslatorStyler\bin\Release\MetroFramework.Fonts.dll
+C:\dev\cs\MetroTranslatorStyler\MetroTranslatorStyler\obj\Release\MetroTranslator.dll
+C:\dev\cs\MetroTranslatorStyler\MetroTranslatorStyler\obj\Release\MetroTranslator.pdb
