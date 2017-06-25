@@ -1,7 +1,6 @@
 ﻿using MetroFramework.Controls;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Globalization;
 using System.Reflection;
 using System.Resources;
@@ -49,12 +48,25 @@ namespace MetroTranslatorStyler
             {
                 string translated = "";
                 InitLanguage();
+                ToolStripSeparator s;
                 IEnumerable<Control> controls = TranslatorStyler.GetSelfAndChildrenRecursive(parent);
                 foreach (Control c in controls)
                 {
                     if (TryTranslate(c.Text, out translated))
                         c.Text = translated;
-                    if (c is ComboBox)
+                    IEnumerable<ToolStripMenuItem> tsmis = TranslatorStyler.GetAllToolStripMenuItemsRecursive(c.ContextMenuStrip);
+                    foreach (ToolStripMenuItem tsmi in tsmis)
+                    {
+                        if (TryTranslate(tsmi.Text, out translated))
+                            tsmi.Text = translated;
+                    }
+                    if (c is MetroTextBox)
+                    {
+                        MetroTextBox mtb = (MetroTextBox)c;
+                        if (TryTranslate(mtb.WaterMark, out translated))
+                            mtb.WaterMark = translated;
+                    }
+                    else if (c is ComboBox)
                     {
                         ComboBox cb = (ComboBox)c;
                         for (int i = 0; i < cb.Items.Count; i++)

@@ -1,8 +1,5 @@
-﻿using MetroFramework;
-using MetroFramework.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace MetroTranslatorStyler
@@ -22,11 +19,43 @@ namespace MetroTranslatorStyler
 
         public static IEnumerable<Control> GetSelfAndChildrenRecursive(Control parent)
         {
-            List<Control> controls = new List<Control>();
-            foreach (Control child in parent.Controls)
-                controls.AddRange(GetSelfAndChildrenRecursive(child));
-            controls.Add(parent);
-            return controls;
+            List<Control> ret = new List<Control>();
+            if (parent != null)
+            {
+                foreach (Control child in parent.Controls)
+                    ret.AddRange(GetSelfAndChildrenRecursive(child));
+                ret.Add(parent);
+            }
+            return ret;
+        }
+
+        public static IEnumerable<ToolStripMenuItem> GetAllToolStripMenuItemsRecursive(ToolStripMenuItem parent)
+        {
+            List<ToolStripMenuItem> ret = new List<ToolStripMenuItem>();
+            if (parent != null)
+            {
+                foreach (ToolStripItem child in parent.DropDownItems)
+                {
+                    if (child is ToolStripMenuItem)
+                        ret.AddRange(GetAllToolStripMenuItemsRecursive((ToolStripMenuItem)child));
+                }
+                ret.Add(parent);
+            }
+            return ret;
+        }
+
+        public static IEnumerable<ToolStripMenuItem> GetAllToolStripMenuItemsRecursive(ContextMenuStrip parent)
+        {
+            List<ToolStripMenuItem> ret = new List<ToolStripMenuItem>();
+            if (parent != null)
+            {
+                foreach (ToolStripItem child in parent.Items)
+                {
+                    if (child is ToolStripMenuItem)
+                        ret.AddRange(GetAllToolStripMenuItemsRecursive((ToolStripMenuItem)child));
+                }
+            }
+            return ret;
         }
 
         public static void EnumToComboBox<T>(ComboBox comboBox, T[] exclusions = null)

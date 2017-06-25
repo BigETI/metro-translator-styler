@@ -5,3 +5,10 @@ C:\dev\cs\MetroTranslatorStyler\MetroTranslatorStyler\bin\Debug\MetroFramework.d
 C:\dev\cs\MetroTranslatorStyler\MetroTranslatorStyler\bin\Debug\MetroFramework.Fonts.dll
 C:\dev\cs\MetroTranslatorStyler\MetroTranslatorStyler\obj\Debug\MetroTranslator.dll
 C:\dev\cs\MetroTranslatorStyler\MetroTranslatorStyler\obj\Debug\MetroTranslator.pdb
+X:\repos\metro-translator-styler\MetroTranslatorStyler\bin\Debug\MetroTranslator.dll
+X:\repos\metro-translator-styler\MetroTranslatorStyler\bin\Debug\MetroTranslator.pdb
+X:\repos\metro-translator-styler\MetroTranslatorStyler\bin\Debug\MetroFramework.Design.dll
+X:\repos\metro-translator-styler\MetroTranslatorStyler\bin\Debug\MetroFramework.dll
+X:\repos\metro-translator-styler\MetroTranslatorStyler\bin\Debug\MetroFramework.Fonts.dll
+X:\repos\metro-translator-styler\MetroTranslatorStyler\obj\Debug\MetroTranslator.dll
+X:\repos\metro-translator-styler\MetroTranslatorStyler\obj\Debug\MetroTranslator.pdb
