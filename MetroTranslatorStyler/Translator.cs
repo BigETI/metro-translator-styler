@@ -37,7 +37,7 @@ namespace MetroTranslatorStyler
             if (input.StartsWith("{$") && input.EndsWith("$}") && (input.Length > 4))
             {
                 output = GetTranslation(input.Substring(2, input.Length - 4));
-                ret = true;
+                ret = (input != output);
             }
             return ret;
         }
@@ -119,6 +119,8 @@ namespace MetroTranslatorStyler
                 try
                 {
                     ret = languageResourceManager.GetString(key);
+                    if (ret == null)
+                        ret = "{$" + key + "$}";
                 }
                 catch (Exception e)
                 {
